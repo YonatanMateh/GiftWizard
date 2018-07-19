@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 250px;
+  border: 1px solid;
+}
+
+.container > h3{
+  padding: 0 5px;
+  overflow: hidden;
+}
+.operators {
+  display: flex;
+}
+
+.inner {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn {
+  flex-grow: 1;
+  border: 1px solid;
+  height: 35px;
+}
+
+.btn-operator {
+  background: rgb(245, 146, 62);
+}
+
+.btn-number {
+  width: 33.3%;
+}
+.numbers-container {
+  display: flex;
+  width: 74%;
+  flex-wrap: wrap;
+}
+
+.side-operators {
+  flex-direction: column;
+  display: flex;
+  width: 27%;
+}
