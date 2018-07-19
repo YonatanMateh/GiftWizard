@@ -29,9 +29,12 @@ const addNumber = (val) => {
 // updating the formula state and checking if there is a result,
 // starting a new formula agian
 const updateFormulaIfHasResult = () => {
-  let prevResult = getResult(state.formula);
-  if (prevResult) {
-    prevResult === '0' ? state.formula = "" : state.formula = prevResult;
+  let formula = state.formula.split(' = ');
+  let result = formula[1];
+  if (result === '') {
+    state.formula = formula[0]; // the formula for a new calculation
+  } else if (result) {
+    result === '0' ? state.formula = "" : state.formula = result;
   }
 }
 
@@ -46,14 +49,8 @@ const addOpretor = (val) => {
   return state;
 }
 
-
-
 const isOperator = (arg) => {
   return arg === PLUS || arg === MINUS || arg === EQUALS || arg === MULTIPLE;
-}
-
-const getResult = (str) => {
-  return str.split(' = ')[1];
 }
 
 // sperates the string into array of numbers and operators
@@ -100,7 +97,6 @@ const clearFormula = () => {
   state.formula = '';
   return state;
 }
-
 
 const view = (state, actions) => (
   <div class="container">

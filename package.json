@@ -1,0 +1,23 @@
+{
+  "name": "gift-wizard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoni123/GiftWizard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoni123/GiftWizard/issues"
+  },
+  "homepage": "https://github.com/yoni123/GiftWizard#readme",
+  "dependencies": {
+    "hyperapp": "^1.2.8"
+  }
+}
